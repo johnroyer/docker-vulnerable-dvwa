@@ -10,6 +10,17 @@ The aim of DVWA is to practice some of the most common web vulnerability, with v
 
 ## Run this image
 
+Check configurations in these files:
+
+- `.env`
+- `php.ini`
+- `www.conf`
+- `config.inc.php` (DVWA site configs)
+
+then run docker with
+
+    docker run --name dvwa -d --env-file .env -d
+
 
 ## Login with default credentials
 
