@@ -1,9 +1,8 @@
-FROM debian:9.2
-
-LABEL maintainer "opsxcq@strm.sh"
+FROM mariadb:10.6
 
 RUN apt-get update && \
     apt-get upgrade -y && \
+
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     debconf-utils && \
     echo mariadb-server mysql-server/root_password password vulnerables | debconf-set-selections && \
