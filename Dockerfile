@@ -11,6 +11,9 @@ RUN apt-get install -y less vim-tiny
 
 RUN apt-get clean && rm -fr /var/lib/apt/list/*
 
+COPY www.conf /etc/php/7.4/fpm/pool.d/
+COPY php.ini /etc/php/7.4/fpm
+
 RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 
 EXPOSE 9000
