@@ -1,7 +1,9 @@
 FROM mariadb:10.6
 
 RUN apt-get update && \
-    apt-get upgrade -y && \
+    apt-get upgrade -y
+
+RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 
 #    DEBIAN_FRONTEND=noninteractive apt-get install -y \
 #    debconf-utils && \
