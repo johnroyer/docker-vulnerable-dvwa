@@ -1,15 +1,12 @@
-#!/bin/bash
+#!/bin/env bash
 
-chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
-
-echo '[+] Starting mysql...'
+echo "Starting MariaDB ...."
 service mysql start
 
-echo '[+] Starting apache'
-service apache2 start
+echo "Starting PHP7.4-fpm ...."
+service php7.4-fpm start
 
-while true
-do
-    tail -f /var/log/apache2/*.log
-    exit 0
-done
+echo "Starting Nginx ...."
+service nginx start
+
+tail -f /var/log/nginx/access.log
