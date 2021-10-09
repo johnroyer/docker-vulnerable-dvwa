@@ -17,9 +17,13 @@ Check configurations in these files:
 - `www.conf`
 - `config.inc.php` (DVWA site configs)
 
-then run docker with
+then run docker with:
 
     docker run --name dvwa -d --env-file .env
+
+or add hardware limitations:
+
+    docker run --name dvwa -d --env-file .env -m 1G --cpus="1.5"
 
 
 ## Login with default credentials
