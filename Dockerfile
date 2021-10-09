@@ -14,10 +14,15 @@ RUN apt-get clean && rm -fr /var/lib/apt/list/*
 
 COPY www.conf /etc/php/7.4/fpm/pool.d/
 COPY php.ini /etc/php/7.4/fpm
+COPY default /etc/nginx/sites-available/
+COPY index.php /var/www/html/
+COPY main.sh /
 
 RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 
-EXPOSE 9000
+ENTRYPOINT ["./main.sh"]
+
+EXPOSE 80
 
 #
 #COPY php.ini /etc/php5/apache2/php.ini
