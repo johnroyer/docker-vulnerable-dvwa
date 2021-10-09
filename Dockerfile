@@ -23,21 +23,3 @@ RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 ENTRYPOINT ["./main.sh"]
 
 EXPOSE 80
-
-#
-#COPY php.ini /etc/php5/apache2/php.ini
-#COPY dvwa /var/www/html
-#
-#COPY config.inc.php /var/www/html/config/
-#
-#RUN chown www-data:www-data -R /var/www/html && \
-#    rm /var/www/html/index.html
-#
-#RUN service mysql start && \
-#    sleep 3 && \
-#    mysql -uroot -pvulnerables -e "CREATE USER app@localhost IDENTIFIED BY 'vulnerables';CREATE DATABASE dvwa;GRANT ALL privileges ON dvwa.* TO 'app'@localhost;"
-#
-#EXPOSE 80
-#
-#COPY main.sh /
-#ENTRYPOINT ["/main.sh"]
