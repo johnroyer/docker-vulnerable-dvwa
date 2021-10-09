@@ -19,7 +19,7 @@ Check configurations in these files:
 
 then run docker with
 
-    docker run --name dvwa -d --env-file .env -d
+    docker run --name dvwa -d --env-file .env
 
 
 ## Login with default credentials
