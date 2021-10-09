@@ -3,7 +3,8 @@ FROM mariadb:10.6
 RUN apt-get update && \
     apt-get upgrade -y
 
-RUN apt-get install -y php7.4-fpm php7.4-mysql php7.4-mbstring php7.4-sqlite3 \
+RUN apt-get install -y nginx-full \
+                       php7.4-fpm php7.4-mysql php7.4-mbstring php7.4-sqlite3 \
                        php7.4-xml php7.4-json php7.4-curl php7.4-bcmath \
                        php7.4-zip php7.4-gd
 
