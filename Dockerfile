@@ -8,7 +8,7 @@ RUN apt-get install -y nginx-full \
                        php7.4-xml php7.4-json php7.4-curl php7.4-bcmath \
                        php7.4-zip php7.4-gd
 
-RUN apt-get install -y less vim-tiny
+RUN apt-get install -y less vim-tiny net-tools curl
 
 RUN apt-get clean && rm -fr /var/lib/apt/list/*
 
