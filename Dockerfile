@@ -22,8 +22,11 @@ RUN apt-get clean && rm -fr /var/lib/apt/list/*
 COPY www.conf /etc/php/7.4/fpm/pool.d/
 COPY php.ini /etc/php/7.4/fpm
 COPY default /etc/nginx/sites-available/
-COPY index.php /var/www/html/
 COPY main.sh /root/
+
+RUN rm -fr /var/www/
+COPY --chown=root:root DVWA /var/www/html
+COPY config.inc.php /var/www/html/config/
 
 
 ENTRYPOINT ["/root/main.sh"]
