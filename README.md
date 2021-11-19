@@ -23,7 +23,7 @@ then run docker with:
 
 or add hardware limitations:
 
-    docker run --name dvwa -d dvwa:latest
+    docker run --name dvwa -d -p 8080:80 dvwa:latest
 
 
 ## Login with default credentials
