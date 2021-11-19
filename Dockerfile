@@ -27,6 +27,9 @@ COPY main.sh /root/
 RUN rm -fr /var/www/
 COPY --chown=root:root DVWA /var/www/html
 COPY config.inc.php /var/www/html/config/
+RUN chmod -R 777 /var/www/html/hackable/uploads/ \
+                 /var/www/html/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt \
+                 /var/www/html/config
 
 
 ENTRYPOINT ["/root/main.sh"]
