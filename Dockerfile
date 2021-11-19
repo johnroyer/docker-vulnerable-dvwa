@@ -13,6 +13,7 @@ RUN apt-get install -y nginx-full \
                        php7.4-xml php7.4-json php7.4-bcmath \
                        php7.4-zip php7.4-gd
 
+RUN apt-get install -y mysql-server-8.0
 
 
 
