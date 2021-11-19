@@ -19,7 +19,7 @@ Check configurations in these files:
 
 then run docker with:
 
-    docker run --name dvwa -d -p 8080:80 dvwa:latest
+    docker run --name dvwa -d -v "$(pwd)/config":/var/www/html/config -p 8080:80 dvwa:latest
 
 
 ## Login with default credentials
