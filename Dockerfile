@@ -15,9 +15,8 @@ RUN apt-get clean && rm -fr /var/lib/apt/list/*
 COPY www.conf /etc/php/7.4/fpm/pool.d/
 COPY php.ini /etc/php/7.4/fpm
 COPY default /etc/nginx/sites-available/
+COPY index.php /var/www/html/
 COPY main.sh /
-COPY ./DVWA/* /var/www/html/
-COPY ./config.inc.php /var/www/html/config/
 
 RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 
