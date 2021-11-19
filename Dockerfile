@@ -1,4 +1,4 @@
-FROM mariadb:10.6
+FROM ubuntu:20.04
 
 RUN apt-get update && \
     apt-get upgrade -y
@@ -9,6 +9,8 @@ RUN apt-get install -y nginx-full \
                        php7.4-zip php7.4-gd
 
 RUN apt-get install -y less vim-tiny net-tools curl
+
+
 
 RUN apt-get clean && rm -fr /var/lib/apt/list/*
 
