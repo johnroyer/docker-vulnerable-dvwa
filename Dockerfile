@@ -25,7 +25,6 @@ COPY default /etc/nginx/sites-available/
 COPY index.php /var/www/html/
 COPY main.sh /root/
 
-RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 
 ENTRYPOINT ["/root/main.sh"]
 
