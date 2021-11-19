@@ -23,7 +23,7 @@ then run docker with:
 
 or add hardware limitations:
 
-    docker run --name dvwa -d --env-file .env -m 1G --cpus="1.5"
+    docker run --name dvwa -d --env-file .env -m 1G --cpus="1.5" dvwa:latest
 
 
 ## Login with default credentials
