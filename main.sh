@@ -5,7 +5,7 @@ usermod -d /var/lib/mysql/ mysql
 service mysql start && echo "MySQL started ..."
 
 mysql -u root -e 'CREATE DATABASE dvwa' && \
-mysql -u root -e 'CREATE USER dvwa@localhost IDENTIFIED BY "PASSWPORD"' && \
+mysql -u root -e 'CREATE USER dvwa@localhost IDENTIFIED BY "PASSWORD"' && \
 mysql -u root -e 'GRANT ALL PRIVILEGES ON dvwa.* to dvwa@localhost; FLUSH PRIVILEGES' && \
 echo "Database initialized ..."
 
